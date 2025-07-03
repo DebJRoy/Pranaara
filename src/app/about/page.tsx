@@ -69,29 +69,7 @@ export default function AboutPage() {
     }
   ]
 
-  const team = [
-    {
-      name: 'Master Rajesh Sharma',
-      role: 'Chief Perfumer',
-      experience: '25+ years',
-      specialty: 'Oud & Traditional Attars',
-      description: 'A master craftsman who learned the art of attar making from his grandfather, bringing generational expertise to modern perfumery.'
-    },
-    {
-      name: 'Dr. Priya Mehta',
-      role: 'Fragrance Director',
-      experience: '15+ years',
-      specialty: 'Floral & Contemporary Blends',
-      description: 'PhD in Chemistry with specialization in fragrance composition, bridging traditional methods with scientific innovation.'
-    },
-    {
-      name: 'Arjun Krishnan',
-      role: 'Quality Assurance Head',
-      experience: '12+ years',
-      specialty: 'Quality Control & Testing',
-      description: 'Ensures every product meets our rigorous quality standards through comprehensive testing and quality protocols.'
-    }
-  ]
+
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -132,10 +110,10 @@ export default function AboutPage() {
                   fragrance is the essence of life itself.
                 </p>
                 <p>
-                  Founded in 2015 by master perfumer Rajesh Sharma, Pranaara began as a small atelier in the 
-                  heart of Mumbai. With over 25 years of experience in traditional Indian perfumery, Rajesh 
-                  had a vision to bridge the gap between ancient fragrance-making techniques and contemporary 
-                  luxury standards.
+                  Founded in 2015 by entrepreneur and fragrance enthusiast Debjyoti Roy, Pranaara began as a 
+                  passionate venture in Mumbai. With a vision to bridge the gap between ancient Indian 
+                  fragrance-making techniques and contemporary luxury standards, Debjyoti set out to create 
+                  perfumes that honor tradition while embracing innovation.
                 </p>
                 <p>
                   Today, we continue to honor this legacy by sourcing the finest ingredients from across India 
@@ -309,7 +287,7 @@ export default function AboutPage() {
               <div className="md:w-3/4">
                 <h3 className="text-xl font-semibold mb-2">Foundation</h3>
                 <p className="text-gray-600">
-                  Pranaara was founded by master perfumer Rajesh Sharma in Mumbai, with a vision to create 
+                  Pranaara was founded by entrepreneur Debjyoti Roy in Mumbai, with a vision to create 
                   authentic Indian fragrances that meet international luxury standards.
                 </p>
               </div>
@@ -370,51 +348,28 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
+            <h2 className="text-3xl font-bold mb-4">Meet Our Founder</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              The passionate individuals behind Pranaara who bring their expertise and dedication to every fragrance.
+              The visionary leader behind Pranaara who brings passion and expertise to create exceptional luxury fragrances.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card luxury className="text-center">
-              <CardContent className="p-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-luxury-gold to-luxury-bronze rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">RS</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Master Rajesh Sharma</h3>
-                <p className="text-luxury-gold font-medium mb-2">Chief Perfumer & Founder</p>
-                <p className="text-gray-600 text-sm">
-                  With over 25 years of experience in traditional Indian perfumery, Rajesh leads our 
-                  fragrance creation with unmatched expertise and passion.
-                </p>
-              </CardContent>
-            </Card>
-            <Card luxury className="text-center">
-              <CardContent className="p-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-luxury-gold to-luxury-bronze rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">PM</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Dr. Priya Mehta</h3>
-                <p className="text-luxury-gold font-medium mb-2">Fragrance Director</p>
-                <p className="text-gray-600 text-sm">
-                  A renowned aromatherapist and fragrance expert with a PhD in Chemistry, Priya ensures 
-                  every formula meets our exacting standards.
-                </p>
-              </CardContent>
-            </Card>
-            <Card luxury className="text-center">
-              <CardContent className="p-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-luxury-gold to-luxury-bronze rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">AK</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Arjun Krishnan</h3>
-                <p className="text-luxury-gold font-medium mb-2">Quality Assurance Head</p>
-                <p className="text-gray-600 text-sm">
-                  With a background in chemical engineering and luxury goods, Arjun oversees quality 
-                  control to ensure every bottle meets our premium standards.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="flex justify-center">
+            <div className="max-w-md">
+              <Card luxury className="text-center">
+                <CardContent className="p-8">
+                  <div className="w-32 h-32 bg-gradient-to-br from-luxury-gold to-luxury-bronze rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <span className="text-white text-3xl font-bold">DR</span>
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-3">Debjyoti Roy</h3>
+                  <p className="text-luxury-gold font-medium mb-4 text-lg">Founder and Director</p>
+                  <p className="text-gray-600 leading-relaxed">
+                    A passionate entrepreneur and fragrance enthusiast, Debjyoti founded Pranaara with a vision to create 
+                    luxury Indian perfumes that celebrate our rich heritage while meeting international standards. 
+                    His dedication to quality and innovation drives every aspect of the brand's excellence.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
