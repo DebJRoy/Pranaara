@@ -376,24 +376,24 @@ export function Header() {
 
           {/* Mobile navigation */}
           {mobileMenuOpen && (
-            <div className="lg:hidden">
-              <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="lg:hidden fixed inset-x-0 top-0 z-50 bg-white shadow-lg transform transition-transform duration-300 ease-in-out safe-area-top">
+              <div className="px-4 pt-16 pb-6 space-y-1">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <Link
                       href={item.href}
-                      className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                      className="nav-link block w-full text-left text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600 touch-target"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
                     </Link>
                     {item.type === 'dropdown' && item.items && (
-                      <div className="ml-4 space-y-1">
+                      <div className="ml-4 space-y-1 mt-2">
                         {item.items.map((subItem) => (
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="block rounded-md px-3 py-1 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary-600"
+                            className="block rounded-md px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary-600 touch-target"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {subItem.name}
@@ -401,8 +401,63 @@ export function Header() {
                         ))}
                       </div>
                     )}
+                    {item.type === 'mega' && item.categories && (
+                      <div className="ml-4 space-y-3 mt-2">
+                        {item.categories.map((category) => (
+                          <div key={category.title}>
+                            <h4 className="text-xs font-semibold text-luxury-gold uppercase tracking-wide mb-2">
+                              {category.title}
+                            </h4>
+                            <div className="space-y-1">
+                              {category.items.map((categoryItem) => (
+                                <Link
+                                  key={categoryItem.name}
+                                  href={categoryItem.href}
+                                  className="block rounded-md px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary-600 touch-target"
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {categoryItem.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
+                
+                {/* Mobile-only actions */}
+                <div className="pt-4 mt-4 border-t border-gray-200 space-y-2">
+                  <Link
+                    href="/wishlist"
+                    className="nav-link flex items-center w-full text-left text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600 touch-target"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <HeartIcon className="h-5 w-5 mr-3" />
+                    Wishlist
+                  </Link>
+                  <Link
+                    href="/cart"
+                    className="nav-link flex items-center w-full text-left text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600 touch-target"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <ShoppingBagIcon className="h-5 w-5 mr-3" />
+                    Shopping Cart
+                  </Link>
+                  {!session && (
+                    <button
+                      onClick={() => {
+                        signIn()
+                        setMobileMenuOpen(false)
+                      }}
+                      className="nav-link flex items-center w-full text-left text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600 touch-target"
+                    >
+                      <UserIcon className="h-5 w-5 mr-3" />
+                      Sign In
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           )}

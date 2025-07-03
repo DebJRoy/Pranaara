@@ -74,7 +74,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative section-py-small sm:section-py overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/branding/heritage-luxury-woman.png"
@@ -84,11 +84,11 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative z-10 mx-auto max-w-7xl container-mobile text-center safe-area-top">
+          <h1 className="heading-1 font-bold text-white mb-6">
             Our <span className="text-gradient-gold">Story</span>
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="body-large text-white/90 max-w-3xl mx-auto leading-relaxed">
             Born from a passion for authentic Indian fragrances, Pranaara represents the perfect harmony 
             between traditional perfumery and modern luxury. Our journey is one of dedication, craftsmanship, 
             and an unwavering commitment to excellence.
@@ -97,12 +97,12 @@ export default function AboutPage() {
       </section>
 
       {/* Brand Story */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">The Essence of Pranaara</h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+      <section className="section-py bg-white">
+        <div className="mx-auto max-w-7xl container-mobile">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="heading-2 mb-6">The Essence of Pranaara</h2>
+              <div className="space-y-4 body-medium text-gray-700 leading-relaxed">
                 <p>
                   Pranaara was born from a simple yet profound vision: to create fragrances that tell stories, 
                   evoke emotions, and celebrate the rich heritage of Indian perfumery. Our name, derived from 
@@ -122,8 +122,8 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-luxury-gold/20 to-luxury-bronze/20 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative order-1 lg:order-2">
+              <div className="aspect-[4/3] bg-gradient-to-br from-luxury-gold/20 to-luxury-bronze/20 rounded-2xl overflow-hidden shadow-2xl image-container-mobile">
                 <Image
                   src="/images/branding/luxury-lifestyle-event.png"
                   alt="Pranaara luxury lifestyle"

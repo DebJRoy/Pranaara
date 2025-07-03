@@ -120,42 +120,42 @@ export default async function HomePage() {
         </div>
 
         {/* Content with sophisticated entrance animations */}
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl md:text-7xl font-light mb-6 pranaara-heading animate-text-reveal animation-delay-500">
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto container-mobile">
+          <h1 className="heading-1 font-light mb-6 pranaara-heading animate-text-reveal animation-delay-500">
             <span className="inline-block animate-slide-up animation-delay-500">Discover the Art of</span>
             <span className="block mt-2 text-gradient-gold font-normal animate-slide-up animation-delay-800">
               <span className="inline-block animate-shimmer-text">Indian Perfumery</span>
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-light animate-fade-in-elegant animation-delay-1200">
+          <p className="body-large mb-8 max-w-2xl mx-auto font-light animate-fade-in-elegant animation-delay-1200">
             <span className="inline-block animate-slide-up animation-delay-1200">Where ancient traditions meet modern luxury</span>
             <span className="inline-block animate-slide-up animation-delay-1400"> in every precious drop</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-elegant animation-delay-1600">
-            <Button asChild size="lg" className="bg-luxury-gold hover:bg-luxury-bronze text-black font-medium px-8 py-3 rounded-none animate-magnetic-hover group">
-              <Link href="/shop" className="flex items-center gap-2">
+            <Button asChild size="lg" className="btn-luxury w-full sm:w-auto touch-target group">
+              <Link href="/shop" className="flex items-center justify-center gap-2">
                 <span className="group-hover:animate-pulse">Explore Collection</span>
                 <ArrowRightIcon className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </Button>
-            <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-none transition-all duration-500 animate-magnetic-hover hover:scale-105 hover:shadow-luxury">
-              <Link href="/about">Our Heritage</Link>
+            <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black w-full sm:w-auto touch-target transition-all duration-500 animate-magnetic-hover hover:scale-105 hover:shadow-luxury">
+              <Link href="/about" className="flex items-center justify-center">Our Heritage</Link>
             </Button>
           </div>
           
           {/* Trust indicators with staggered animations */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm animate-fade-in-elegant animation-delay-2000">
-            <span className="flex items-center gap-2 animate-slide-up animation-delay-2000 hover:text-luxury-gold transition-colors duration-300">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm animate-fade-in-elegant animation-delay-2000">
+            <span className="flex items-center gap-2 animate-slide-up animation-delay-2000 hover:text-luxury-gold transition-colors duration-300 touch-target">
               <ShieldCheckIcon className="h-4 w-4 animate-pulse-gentle" />
               Premium Quality
             </span>
-            <span className="flex items-center gap-2 animate-slide-up animation-delay-2200 hover:text-luxury-gold transition-colors duration-300">
+            <span className="flex items-center gap-2 animate-slide-up animation-delay-2200 hover:text-luxury-gold transition-colors duration-300 touch-target">
               <TruckIcon className="h-4 w-4 animate-pulse-gentle animation-delay-500" />
               Free Shipping
             </span>
-            <span className="flex items-center gap-2 animate-slide-up animation-delay-2400 hover:text-luxury-gold transition-colors duration-300">
+            <span className="flex items-center gap-2 animate-slide-up animation-delay-2400 hover:text-luxury-gold transition-colors duration-300 touch-target">
               <HeartIcon className="h-4 w-4 animate-pulse-gentle animation-delay-1000" />
               Handcrafted
             </span>
@@ -179,38 +179,38 @@ export default async function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold mb-4 pranaara-heading">Why Choose PRANAARA</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+      <section className="section-py bg-gray-50">
+        <div className="max-w-7xl mx-auto container-mobile">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+            <h2 className="heading-2 mb-4 pranaara-heading">Why Choose PRANAARA</h2>
+            <p className="body-large text-gray-600 max-w-2xl mx-auto">
               Experience the pinnacle of luxury fragrances with our commitment to excellence
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center group">
-              <div className="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-luxury-gold/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <div className="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-luxury-gold/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 touch-target">
                 <SparklesIcon className="h-8 w-8 text-luxury-gold" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 pranaara-heading">Premium Ingredients</h3>
-              <p className="text-gray-600">Sourced from the finest materials across the globe for an unparalleled olfactory experience</p>
+              <h3 className="heading-3 mb-4 pranaara-heading">Premium Ingredients</h3>
+              <p className="body-medium text-gray-600">Sourced from the finest materials across the globe for an unparalleled olfactory experience</p>
             </div>
             
             <div className="text-center group">
-              <div className="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-luxury-gold/20 transition-all duration-300 group-hover:-rotate-6">
+              <div className="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-luxury-gold/20 transition-all duration-300 group-hover:-rotate-6 touch-target">
                 <ShieldCheckIcon className="h-8 w-8 text-luxury-gold" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 pranaara-heading">Authentic Excellence</h3>
-              <p className="text-gray-600">Every bottle represents our unwavering commitment to quality and traditional craftsmanship</p>
+              <h3 className="heading-3 mb-4 pranaara-heading">Authentic Excellence</h3>
+              <p className="body-medium text-gray-600">Every bottle represents our unwavering commitment to quality and traditional craftsmanship</p>
             </div>
             
             <div className="text-center group">
-              <div className="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-luxury-gold/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <div className="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-luxury-gold/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 touch-target">
                 <HeartIcon className="h-8 w-8 text-luxury-gold" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 pranaara-heading">Passionate Craft</h3>
-              <p className="text-gray-600">Each fragrance tells a story, crafted with passion and perfected through generations</p>
+              <h3 className="heading-3 mb-4 pranaara-heading">Passionate Craft</h3>
+              <p className="body-medium text-gray-600">Each fragrance tells a story, crafted with passion and perfected through generations</p>
             </div>
           </div>
         </div>
