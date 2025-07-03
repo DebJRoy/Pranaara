@@ -1,0 +1,28 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+  DATABASE_URL = "file:./dev.db"
+  NEXTAUTH_URL = "https://pranaara-ecommerce.netlify.app"
+  NEXTAUTH_SECRET = "pranaara-production-secret-key-please-change-in-production"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+  from = "/_next/static/*"
+  to = "/_next/static/:splat"
+  status = 200
+  headers = { Cache-Control = "public, max-age=31536000, immutable" } 
